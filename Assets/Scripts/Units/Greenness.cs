@@ -9,7 +9,7 @@ namespace Assets.Scripts.Units
 
         }
 
-        public int Trait => 1;
-
+        public int SignInt => 1;
+        public string SignString => "+";
     }
 }

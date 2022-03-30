@@ -200,7 +200,7 @@ SpriteRenderer:
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 2
-  m_Size: {x: 14.01, y: 20.09}
+  m_Size: {x: 14.01, y: 20.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -230,7 +230,6 @@ GameObject:
   m_Component:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
-  - component: {fileID: 519420029}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -238,14 +237,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &519420029
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 519420028}
-  m_Enabled: 1
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -416,7 +407,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 620687106}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c2f180d6b7e0e342b0de8366edd845f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7add878ca226c474a800580b7af89519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &893611666
@@ -643,6 +634,7 @@ MonoBehaviour:
   _config: {fileID: 11400000, guid: 7bffa5b8c22c3834181c6eb8f353dccd, type: 2}
   _levelTMP: {fileID: 1860323026}
   _movesTMP: {fileID: 1299405608}
+  _back: {fileID: 516747466}
 --- !u!61 &1047452819
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -903,6 +895,14 @@ PrefabInstance:
     - target: {fileID: 4598472034557633997, guid: f5d8d39c61b6951439ac6dd93285f152, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598472034557633998, guid: f5d8d39c61b6951439ac6dd93285f152, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4598472035840999230, guid: f5d8d39c61b6951439ac6dd93285f152, type: 3}
+      propertyPath: m_SortingOrder
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5d8d39c61b6951439ac6dd93285f152, type: 3}

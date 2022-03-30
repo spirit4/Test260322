@@ -8,6 +8,7 @@ namespace Assets.Scripts.Units
     {
 
         protected GameObject _view;
+        protected GameObject _ui;
         protected Vector2Int _position;// position in array
         protected int _health;
 
@@ -15,6 +16,7 @@ namespace Assets.Scripts.Units
         public Unit(GameObject view)
         {
             _view = view;
+            _ui = _view.transform.GetChild(0).gameObject;
         }
         public virtual void Deploy(Vector2Int position, Transform parent)
         {
@@ -33,29 +35,17 @@ namespace Assets.Scripts.Units
             _health = health;
         }
 
-
-        public GameObject View
+        public virtual void Destroy()
         {
-            get
-            {
-                return _view;
-            }
+            UnityEngine.Object.Destroy(_view);
+            _view = null;
+            _ui = null;
         }
 
-        public int Health
-        {
-            get
-            {
-                return _health;
-            }
+        public GameObject View { get { return _view; } }
+        public int Health { get { return _health; } }
+        public Vector2Int Position { get { return _position; } }
 
-        }
-        public Vector2Int Position
-        {
-            get
-            {
-                return _position;
-            }
-        }
+
     }
 }

@@ -15,3 +15,4 @@ MonoBehaviour:
   _fieldWidth: 3
   _fieldHeight: 3
   _playerHealth: 1
+  _tweenDuration: 0.1

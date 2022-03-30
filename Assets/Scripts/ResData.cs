@@ -16,7 +16,6 @@ namespace Assets.Scripts
             sprites = new Dictionary<Type, Sprite>();
             sprites.Add(typeof(Redness), atlas.GetSprite("RedCardOverlay"));
             sprites.Add(typeof(Greenness), atlas.GetSprite("GreenCardOverlay"));
-
         }
     }
 }

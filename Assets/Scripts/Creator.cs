@@ -10,8 +10,7 @@ namespace Assets.Scripts
 
         public Creator(Config config)
         {
-            _cards = new Stack<Card>((int)(config.FieldWidth * config.FieldHeight));//TODO 2 cards in pool
-
+            _cards = new Stack<Card>((int)(config.FieldWidth * config.FieldHeight));
         }
 
         public Card GetCard(GameObject prefab)
@@ -27,7 +26,6 @@ namespace Assets.Scripts
 
         public void TakeItBack(Card card)
         {
-            card.View.SetActive(false);
             _cards.Push(card);
         }
 
@@ -35,7 +33,7 @@ namespace Assets.Scripts
         {
             foreach (var card in _cards)
             {
-                UnityEngine.Object.Destroy(card.View);
+                card.Destroy();
             }
             _cards.Clear();
             _cards = null;

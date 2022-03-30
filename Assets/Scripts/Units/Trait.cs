@@ -1,8 +1,9 @@
 ﻿
 namespace Assets.Scripts.Units
 {
-    public interface ITrait //TODO think on name
+    public interface ITrait
     {
-         int Trait { get; }
+        int SignInt { get; }
+        string SignString { get; }
     }
 }
