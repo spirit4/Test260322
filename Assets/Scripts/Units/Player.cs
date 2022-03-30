@@ -10,7 +10,7 @@ namespace Assets.Scripts.Units
 
         public Player(GameObject view) : base(view)
         {
-
+            _view.SetActive(false);//wait for other cards
         }
 
         public void MoveTo(Vector2Int position, IInteractable unit)

@@ -1,4 +1,4 @@
-﻿using TMPro;
+﻿using DG.Tweening;
 using UnityEngine;
 
 
@@ -20,14 +20,15 @@ namespace Assets.Scripts.Units
         }
         public virtual void Deploy(Vector2Int position, Transform parent)
         {
-            //Debug.Log($"Deploy position {position.x}, {position.y}");
             _position = position;
 
             Vector3 pos = _view.GetComponent<SpriteRenderer>().bounds.size;
             _view.transform.SetParent(parent);
             _view.transform.localPosition = new Vector3(pos.x * position.x, pos.y * position.y);
-
             _view.SetActive(true);
+
+            _view.transform.localScale = Vector3.zero;
+            _view.transform.DOScale(Vector3.one, 0.4f).SetEase(Ease.InQuad);
         }
 
         public virtual void Init(int health)

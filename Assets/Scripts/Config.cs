@@ -12,8 +12,8 @@ namespace Assets.Scripts
         [SerializeField]
         private int _playerHealth;
 
-        [Range(0.1f, 5.0f), SerializeField]
-        private float _tweenDuration = 0.3f;
+        //[Range(0.1f, 5.0f), SerializeField]
+        //private float _tweenDuration = 0.3f;
 
         public uint FieldWidth { get { return _fieldWidth; } }
         public uint FieldHeight { get { return _fieldHeight; } }
